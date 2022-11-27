@@ -49,7 +49,7 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <main className='overflow-auto bg-light bg-gradient p-4' style={{height: '700px'}}>
+      <main className='overflow-auto bg-light bg-gradient p-4'>
         <Routes>
           <Route path='/' element={(
             <Home

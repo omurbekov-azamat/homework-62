@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const NavBar: React.FC = () => {
   return (
-    <div className='navbar navbar-expand-md navbar-dark bg-black mt-5 rounded-top'>
+    <div className='navbar navbar-expand-md navbar-dark bg-black rounded-top'>
       <div className='container-fluid'>
         <span className='navbar-brand'>&#8251;</span>
         <div className="collapse navbar-collapse">

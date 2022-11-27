@@ -1,18 +1,17 @@
 import React from 'react';
+import Contents from "../../components/Content/Contents";
+import {GotContent} from "../../types";
 
 const AboutUs = () => {
+  const someContent: GotContent[] = [
+    {textCss: 'fs-5 order-2 fst-italic', imageCss: 'order-1 me-3', imageUrl: 'https://aif-s3.aif.ru/images/012/552/99886b60ec84eecf1312e230254dca99.jpg'},
+    {textCss: 'fs-5 order-1 fw-bolder', imageCss: 'order-2 ms-3', imageUrl: 'https://studentstudy.com.ua/media/about/cover/1601545813_7393813_5e8b9ea32bdd0-5e8b9ea32bdd31280px-main_quadrangle_univers_POTxoQC.jpg'},
+    {textCss: 'fs-5 order-2 fw-lighter', imageCss: 'order-1 me-3', imageUrl: 'https://kartinkin.net/uploads/posts/2022-02/1645092829_58-kartinkin-net-p-ucheba-kartinki-65.jpg'},
+  ];
+
   return (
     <div className='p-5'>
-      <p className='fs-1'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa officia quisquam similique! Amet architecto
-        corporis deleniti dicta exercitationem explicabo fuga illo laborum libero molestias natus quam quibusdam
-        repellendus rerum sequi totam, ut veniam, voluptate? Natus perspiciatis, placeat recusandae reiciendis sed sequi
-        voluptas! A ab ad consectetur consequuntur corporis, cupiditate deserunt eveniet impedit, ipsam magni nesciunt
-        odit omnis possimus ratione reprehenderit sed sit unde veniam, veritatis vitae. Aliquid amet asperiores
-        assumenda eaque enim est iste itaque laborum minima minus modi, molestias nulla numquam quibusdam ratione sint
-        soluta, sunt temporibus voluptate voluptatem. Assumenda dignissimos enim eum facere labore laborum molestiae
-        odio repellat?
-      </p>
+      <Contents newContents={someContent}/>
     </div>
   );
 };
