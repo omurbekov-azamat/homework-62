@@ -2,9 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 58vh;
 }
-
 .circle {
     width: 200px;
     height: 200px;
@@ -17,7 +15,6 @@
 .circle-2 {
     animation: rotate-loader 1ms infinite;
 }
-
 @keyframes show-loader {
     0%{
         opacity: 0;
@@ -30,7 +27,6 @@
         transform: translateY(0);
     }
 }
-
 @keyframes rotate-loader {
     0%{
         transform: rotate(0deg);

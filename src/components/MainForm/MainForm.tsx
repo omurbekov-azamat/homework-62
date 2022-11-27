@@ -26,11 +26,11 @@ const MainForm: React.FC<Props> = (props) => {
           type="text"
           className='form-control me-2'
           value={country}
-          placeholder='Country...'
+          placeholder='Search universities, write Country'
           required
           onChange={gotCountry}
         />
-        <button className='btn btn-info'>Find</button>
+        <button className='btn btn-info'>Search</button>
       </div>
     </form>
   );
