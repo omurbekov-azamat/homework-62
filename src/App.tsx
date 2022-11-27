@@ -6,28 +6,42 @@ import Home from "./containers/Home/Home";
 import AboutUs from "./containers/AboutUs/AboutUs";
 import Contacts from "./containers/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
-import {GotUniversity} from "./types";
+import {GotCountry, GotUniversity} from "./types";
 
 const mainUrl = 'http://universities.hipolabs.com/search?country=';
+const infoUrl = 'https://restcountries.com/v2/name/'
 
 function App() {
   const [universities, setUniversities] = useState<GotUniversity[]>([]);
 
   const fetchData = useCallback(async (url: string) => {
-    const universitiesResponse = await axios.get<GotUniversity[]>(url);
+
+    const universitiesResponse = await axios.get<GotUniversity[]>(mainUrl + url);
+    const aboutCountryResponse = await axios.get<GotCountry[]>(infoUrl + url);
+
     if (universitiesResponse.data.length !== 0) {
-      setUniversities(universitiesResponse.data);
+      const promises = universitiesResponse.data.map(async set => {
+        return {
+          country: set.country,
+          domains: set.domains,
+          name: set.name,
+          capital: aboutCountryResponse.data[0].capital,
+          flag: aboutCountryResponse.data[0].flag,
+        };
+      });
+      const data = await Promise.all(promises)
+      setUniversities(data);
     } else {
       alert('Please try another country!');
     }
   }, []);
 
   useEffect(() => {
-    fetchData(mainUrl + 'United+States').catch(console.error);
+    fetchData('kyrgyzstan').catch(console.error);
   }, [fetchData]);
 
   const findUniversitiesFromCountry = (newCountry: string) => {
-    fetchData(mainUrl + newCountry).catch(console.error);
+    fetchData(newCountry).catch(console.error);
   };
 
   return (

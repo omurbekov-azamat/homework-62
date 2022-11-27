@@ -22,11 +22,11 @@ const Universities: React.FC<Props> = ({allUniversities}) => {
   };
 
   return (
-    <div className='row m-0 p-3 overflow-auto' style={{height: '600px', width: '600px'}}>
+    <div className='row m-0 p-3 overflow-auto' style={{height: '500px', width: '600px'}}>
       {allUniversities.map(university => (
         <University
-          key={Math.random() * 999999}
-          university={university}
+          key={Math.random() * 99999}
+          country={university}
         />
       ))}
       {empty()}

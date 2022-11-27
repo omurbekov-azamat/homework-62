@@ -2,10 +2,10 @@ import React from 'react';
 import {GotUniversity} from "../../types";
 
 interface Props {
-  university: GotUniversity;
+  country: GotUniversity;
 }
 
-const University: React.FC<Props> = ({university}) => {
+const University: React.FC<Props> = ({country}) => {
   const color: string[] = ['lightblue', 'lightcoral', 'lightcyan', 'lightgray', 'lightpink', 'lightgreen', 'lightgrey', 'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightgoldenrodyellow', 'lightsteelblue', 'lightyellow'];
 
   const random = (args: string[]) => {
@@ -14,11 +14,18 @@ const University: React.FC<Props> = ({university}) => {
   };
 
   return (
-    <div className='my-2 p-2 border col-2 text-center align-items-center d-flex flex-column justify-content-around'
-         style={{width: '600px', height: '150px', background: random(color)}}>
-      <p>University: {university.name}</p>
-      <p>Country: {university.country}</p>
-      <a className='btn btn-outline-danger' href={'https://www.' + university.domains} target='_blank'>Подробнее</a>
+    <div
+      className='my-2 p-2 border col-2 text-center align-items-center d-flex flex-column justify-content-around bg-dark bg-opacity-50 rounded'
+      style={{width: '600px', height: '150px'}}>
+      <div className='d-flex justify-content-between' style={{width: '540px'}}>
+        <div className='text-start'>
+          <p className='m-0'>Country: {country.country}</p>
+          <p className='m-0'>Capital: {country.capital}</p>
+        </div>
+        <img className='ps-1' style={{width: '80px'}} src={country.flag} alt={country.country}/>
+      </div>
+      <p className='m-0 text-uppercase fw-bolder' style={{color: random(color)}}>{country.name}</p>
+      <a className='btn btn-outline-light' href={'https://www.' + country.domains} target='_blank'>Подробнее</a>
     </div>
   );
 };
