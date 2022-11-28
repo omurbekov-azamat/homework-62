@@ -16,3 +16,9 @@ export interface GotCountry {
   capital: string;
   flag: string;
 }
+
+export interface GotUser {
+  name: string;
+  number: string;
+  email: string;
+}
