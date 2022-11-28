@@ -1,24 +1,41 @@
 import React from 'react';
+import ContactForm from "../../components/ContactForm/ContactForm";
+import Carousel from "../../components/Carousel/Carousel";
 
 const Contacts = () => {
   return (
-    <div className='p-5'>
-      <p className='fs-1'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci delectus distinctio dolore dolorem
-        eveniet, incidunt magnam neque nesciunt odit porro qui sed, tempore temporibus tenetur voluptatem! Adipisci,
-        alias atque culpa dolorem earum enim eos esse explicabo, inventore ipsa iusto molestiae natus nesciunt nihil
-        obcaecati omnis optio pariatur perspiciatis repellat similique tempora tempore vitae. Aliquam obcaecati, quia.
-        Earum necessitatibus temporibus velit! Aliquid animi atque consequatur eum facilis iste laborum libero molestiae
-        nihil obcaecati pariatur quas quasi sequi tempora, veniam. Ad alias aliquam aperiam autem cum deserunt
-        dignissimos dolores ea esse harum laborum magni maxime minima nam nihil nostrum nulla, odit officiis omnis
-        pariatur perferendis quaerat quam quo recusandae rem repellendus reprehenderit rerum tempora vero voluptatum.
-        Adipisci alias asperiores, atque, commodi consequuntur corporis culpa cumque debitis doloribus eligendi enim eos
-        et excepturi expedita impedit in incidunt magni minima natus nihil nisi nobis nulla numquam odit officiis omnis
-        perspiciatis placeat possimus quaerat quia reiciendis sapiente soluta temporibus tenetur unde voluptates
-        voluptatum? Corporis dicta doloribus, laboriosam magni soluta voluptate? Ad deleniti ex iste iusto laborum nisi
-        non perferendis quas, totam! A aliquid autem consectetur illo incidunt laboriosam qui reiciendis tempora
-        voluptatibus! Aliquid fugit, ipsum nostrum odit optio repellendus soluta sunt veniam voluptatem!
-      </p>
+    <div>
+      <div className='d-flex justify-content-between align-items-center mb-5'>
+        <div>
+          <img
+            src="https://www.google.com/maps/d/thumbnail?mid=1N6j-_SrRjZO7t2lL7hmchg3na68&hl=en_US"
+            alt="map"/>
+        </div>
+        <div style={{width: '600px'}}>
+          <div className='d-flex justify-content-center'>
+            <div className='pe-3 fw-bolder'>
+              <p>Наш Адрес:</p>
+              <p>Контактные телефоны:</p>
+              <p>Контактный email:</p>
+              <p>Часы работы:</p>
+              <p>Обед:</p>
+              <p>Выходные:</p>
+            </div>
+            <div className='ps-3'>
+              <p>г. Винтерфелл, улица Старка, дом 9</p>
+              <p>8-913-674-92-76</p>
+              <p>winter_is_coming@gmail.com</p>
+              <p>9.00 - 18.00</p>
+              <p>12.00 - 13.00</p>
+              <p>Сб. - Вс.</p>
+            </div>
+          </div>
+          <div className='ps-5 ms-5'>
+            <ContactForm/>
+          </div>
+        </div>
+      </div>
+      <Carousel/>
     </div>
   );
 };

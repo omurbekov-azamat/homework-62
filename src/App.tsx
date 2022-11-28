@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import {GotCountry, GotUniversity} from "./types";
 
 const mainUrl = 'http://universities.hipolabs.com/search?country=';
-const infoUrl = 'https://restcountries.com/v2/name/'
+const infoUrl = 'https://restcountries.com/v2/name/';
 
 function App() {
   const [universities, setUniversities] = useState<GotUniversity[]>([]);
@@ -29,7 +29,7 @@ function App() {
           flag: aboutCountryResponse.data[0].flag,
         };
       });
-      const data = await Promise.all(promises)
+      const data = await Promise.all(promises);
       setUniversities(data);
     } else {
       alert('Please try another country!');

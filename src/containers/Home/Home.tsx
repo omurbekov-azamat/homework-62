@@ -1,8 +1,9 @@
 import React from 'react';
-import {GotUniversity} from "../../types";
+import {GotContent, GotUniversity} from "../../types";
 import Universities from "../../components/University/Universities";
 import MainForm from "../../components/MainForm/MainForm";
 import Carousel from "../../components/Carousel/Carousel";
+import Contents from "../../components/Content/Contents";
 
 interface Props {
   allUniversities: GotUniversity[]
@@ -10,6 +11,13 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({allUniversities, onSubmit}) => {
+  const someContent: GotContent[] = [
+    {textCss: 'fs-5 order-2 fst-italic', imageCss: 'order-1 me-3', imageUrl: 'https://www.onatlas.com/wp-content/uploads/2019/03/education-students-people-knowledge-concept-P6MBQ5W-1080x675.jpg'},
+    {textCss: 'fs-5 order-1 fw-bolder', imageCss: 'order-2 ms-3', imageUrl: 'https://oregonstate.edu/sites/default/files/paragraphs/linc-quad_0.jpg'},
+    {textCss: 'fs-5 order-2 fw-lighter', imageCss: 'order-1 me-3', imageUrl: 'https://www.bsdc.ac.uk/images/UniversityLevel/Staffordshire-Uni-In-Partnership-Banner-02web.jpg'},
+  ];
+
+
   return (
     <div>
       <div className='d-flex justify-content-between pb-5 mb-4 border-bottom border-danger'>
@@ -26,8 +34,8 @@ const Home: React.FC<Props> = ({allUniversities, onSubmit}) => {
         </div>
       </div>
       <Carousel/>
+      <Contents newContents={someContent}/>
     </div>
-
   );
 };
 
