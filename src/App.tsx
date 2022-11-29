@@ -1,16 +1,17 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
-import Home from "./containers/Home/Home";
-import AboutUs from "./containers/AboutUs/AboutUs";
-import Contacts from "./containers/Contacts/Contacts";
-import Footer from "./components/Footer/Footer";
-import Chat from "./containers/Chat/Chat";
-import BurgerShop from "./containers/BurgerShop/BurgerShop";
+import NavBar from "./Components/NavBar/NavBar";
+import Home from "./Containers/Home/Home";
+import AboutUs from "./Containers/AboutUs/AboutUs";
+import Contacts from "./Containers/Contacts/Contacts";
+import Footer from "./Components/Footer/Footer";
+import Chat from "./Containers/Chat/Chat";
+import BurgerShop from "./Containers/BurgerShop/BurgerShop";
+import Portfolio from "./Containers/Portfolio/Portfolio";
 
 function App() {
   return (
-    <div className='container rounded p-0 shadow-lg'>
+    <div className='container rounded p-0 shadow-lg' >
       <header>
         <NavBar/>
       </header>
@@ -25,12 +26,16 @@ function App() {
           <Route path='/contacts' element={(
             <Contacts/>
           )}/>
-          <Route path='/portfolio/chat' element={(
-            <Chat/>
-          )}/>
-          <Route path='/portfolio/burger' element={(
-            <BurgerShop/>
-          )}/>
+          <Route path='/portfolio' element={(
+            <Portfolio/>
+          )}>
+            <Route path='chat' element={(
+              <Chat/>
+            )}/>
+            <Route path='burger' element={(
+              <BurgerShop/>
+            )}/>
+          </Route>
           <Route path='*' element={(
             <h1>Not found!</h1>
           )}/>

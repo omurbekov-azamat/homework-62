@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Orders from "../../components/BurgerKing/Orders/Orders";
-import Menu from "../../components/BurgerKing/CustomerMenu/Menu";
+import Orders from "../../Components/BurgerKing/Orders/Orders";
+import Menu from "../../Components/BurgerKing/CustomerMenu/Menu";
 import hamburgerImage from '../../assets/burger.png';
 import shawarmaImage from '../../assets/shawarma.png'
 import frenchFriesImage from '../../assets/french fries.png';
@@ -47,7 +47,7 @@ function App() {
   }, 0);
 
   return (
-    <div className='d-flex justify-content-center mt-2 bg-black'>
+    <div className='d-flex justify-content-center mt-5 bg-black'>
       <Orders
         orders={menu}
         getPrice={getOrderPrice}

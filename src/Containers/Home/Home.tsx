@@ -1,9 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import axios from "axios";
-import Universities from "../../components/University/Universities";
-import MainForm from "../../components/MainForm/MainForm";
-import Carousel from "../../components/Carousel/Carousel";
-import Contents from "../../components/Content/Contents";
+import Universities from "../../Components/University/Universities";
+import MainForm from "../../Components/MainForm/MainForm";
+import Carousel from "../../Components/Carousel/Carousel";
+import Contents from "../../Components/Content/Contents";
 import {GotContent, GotCountry, GotUniversity} from "../../types";
 
 

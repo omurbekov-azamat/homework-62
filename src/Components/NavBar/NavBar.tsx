@@ -25,21 +25,9 @@ const NavBar: React.FC = () => {
               </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <NavLink to='/portfolio' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <NavLink to='/portfolio' className="nav-link">
                 Portfolio
               </NavLink>
-              <ul className='dropdown-menu'>
-                <li className='dropdown-item'>
-                  <NavLink to='/portfolio/chat' className='nav-link text-black'>
-                    Chat
-                  </NavLink>
-                </li>
-                <li className='dropdown-item'>
-                  <NavLink to='/portfolio/burger' className='nav-link text-black'>
-                    Burger
-                  </NavLink>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Contents from "../../components/Content/Contents";
+import Contents from "../../Components/Content/Contents";
 import {GotContent} from "../../types";
 
 const AboutUs = () => {

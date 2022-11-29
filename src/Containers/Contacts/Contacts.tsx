@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactForm from "../../components/ContactForm/ContactForm";
-import Carousel from "../../components/Carousel/Carousel";
-import Address from "../../components/Address/Address";
+import ContactForm from "../../Components/ContactForm/ContactForm";
+import Carousel from "../../Components/Carousel/Carousel";
+import Address from "../../Components/Address/Address";
 
 const Contacts = () => {
   return (
