@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import 'bootstrap/js/src/dropdown';
 
 const NavBar: React.FC = () => {
   return (
@@ -22,6 +23,18 @@ const NavBar: React.FC = () => {
               <NavLink to='/contacts' className="nav-link">
                 Contacts
               </NavLink>
+            </li>
+            <li className="nav-item dropdown">
+              <NavLink to='/portfolio' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Portfolio
+              </NavLink>
+              <ul className='dropdown-menu'>
+                <li className='dropdown-item'>
+                  <NavLink to='/portfolio/chat' className='nav-link text-black'>
+                    Chat
+                  </NavLink>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

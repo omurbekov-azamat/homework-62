@@ -22,3 +22,10 @@ export interface GotUser {
   number: string;
   email: string;
 }
+
+export interface Data{
+  _id?: string,
+  message: string,
+  author: string,
+  datetime?: string,
+}

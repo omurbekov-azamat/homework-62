@@ -6,6 +6,7 @@ import Home from "./containers/Home/Home";
 import AboutUs from "./containers/AboutUs/AboutUs";
 import Contacts from "./containers/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
+import Chat from "./containers/Chat/Chat";
 import {GotCountry, GotUniversity} from "./types";
 
 const mainUrl = 'http://universities.hipolabs.com/search?country=';
@@ -62,6 +63,9 @@ function App() {
           )}/>
           <Route path='/contacts' element={(
             <Contacts/>
+          )}/>
+          <Route path='/portfolio/chat' element={(
+            <Chat/>
           )}/>
           <Route path='*' element={(
             <h1>Not found!</h1>
