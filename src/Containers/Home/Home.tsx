@@ -40,6 +40,7 @@ const Home = () => {
   }, [fetchData]);
 
   const findUniversitiesFromCountry = (newCountry: string) => {
+    setUniversities([]);
     fetchData(newCountry).catch(console.error);
   };
 
