@@ -8,6 +8,7 @@ import Contacts from "./containers/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import Chat from "./containers/Chat/Chat";
 import {GotCountry, GotUniversity} from "./types";
+import BurgerShop from "./containers/BurgerShop/BurgerShop";
 
 const mainUrl = 'http://universities.hipolabs.com/search?country=';
 const infoUrl = 'https://restcountries.com/v2/name/';
@@ -66,6 +67,9 @@ function App() {
           )}/>
           <Route path='/portfolio/chat' element={(
             <Chat/>
+          )}/>
+          <Route path='/portfolio/burger' element={(
+            <BurgerShop/>
           )}/>
           <Route path='*' element={(
             <h1>Not found!</h1>

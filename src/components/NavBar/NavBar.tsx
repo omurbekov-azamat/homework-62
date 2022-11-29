@@ -34,6 +34,11 @@ const NavBar: React.FC = () => {
                     Chat
                   </NavLink>
                 </li>
+                <li className='dropdown-item'>
+                  <NavLink to='/portfolio/burger' className='nav-link text-black'>
+                    Burger
+                  </NavLink>
+                </li>
               </ul>
             </li>
           </ul>

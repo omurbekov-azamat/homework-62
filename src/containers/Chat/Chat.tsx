@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import Form from "../../components/Chat/Form/Form";
-import Messages from "../../components/Chat/Message/Messages";
+import Form from "../../components/GroupChat/Form/Form";
+import Messages from "../../components/GroupChat/Message/Messages";
 import {Data} from "../../types";
 
 const sound = 'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3';
